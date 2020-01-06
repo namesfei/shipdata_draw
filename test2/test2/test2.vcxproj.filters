@@ -54,6 +54,9 @@
     <ClInclude Include="tchart1.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ShipStatusOffline.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test2.cpp">
@@ -78,6 +81,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="tchart1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ShipStatusOffline.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -190,6 +190,7 @@
     <ClInclude Include="DownView.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="ShipStatusOffline.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="tchart1.h" />
@@ -201,6 +202,7 @@
   <ItemGroup>
     <ClCompile Include="DownView.cpp" />
     <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="ShipStatusOffline.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

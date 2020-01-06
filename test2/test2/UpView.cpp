@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "test2.h"
 #include "UpView.h"
-
+#include "ShipStatusOffline.h"
 
 // CUpView
 
@@ -55,14 +55,24 @@ void CUpView::Dump(CDumpContext& dc) const
 void CUpView::OnBnClickedButton1()
 {
 	// TODO: 在此添加控件通知处理程序代码
-	CSeries lineSeries = (CSeries)m_chart.Series(0);
+	CSeries lineSeries[3];
+	lineSeries[0] = (CSeries)m_chart.Series(0);
+	lineSeries[1] = (CSeries)m_chart.Series(1);
+	lineSeries[2] = (CSeries)m_chart.Series(2);
+	CShipStatusOffline* pNewDofData = CShipStatusOffline::Instance();
+	std::vector<double> t;
+	std::vector<STATUSDATA3DOF> shipStatus;
+	pNewDofData->getShipStatusBySeaLevelAndWind(3, 95, t, shipStatus);
 
-	lineSeries.Clear();
-
-	for (int i = 0; i < 5000; i++)
+	lineSeries[0].Clear();
+	lineSeries[1].Clear();
+	lineSeries[2].Clear();
+	//lineSeries.AddXY(t, shipStatus, NULL, NULL);
+	for (int i = 0; i < 12001; i++)
 	{
-		lineSeries.AddXY((double)i*0.01, sin(i*0.01) + 1, NULL, NULL);
-
+		lineSeries[0].AddXY(t[i], shipStatus[i].dHeave, NULL, NULL);
+		/*lineSeries[1].AddXY(t[i], shipStatus[i].dPitchSpd, NULL, NULL);
+		lineSeries[2].AddXY(t[i], shipStatus[i].dHeaveAcc, NULL, NULL);*/
 	}
 
 }
