@@ -10,6 +10,12 @@
 #define IDD_DOWNVIEW                    311
 #define IDC_TCHART1                     1000
 #define IDC_BUTTON1                     1001
+#define IDC_TCHART2                     1002
+#define IDC_TCHART3                     1003
+#define IDC_TCHART4                     1004
+#define IDC_TCHART5                     1005
+#define IDC_TCHART7                     1006
+#define IDC_TCHART6                     1008
 
 // Next default values for new objects
 // 

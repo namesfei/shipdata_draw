@@ -1,7 +1,7 @@
 #pragma once
 #include "tchart1.h"
-#include "CSeries.h"
-
+#include <vector>
+#include "ShipStatusOffline.h"
 
 // CUpView ¥∞ÃÂ ”Õº
 
@@ -31,7 +31,29 @@ protected:
 private:
 	CTchart1 m_chart;
 public:
-	afx_msg void OnBnClickedButton1();
+//	afx_msg void OnBnClickedButton1();
+//	virtual void OnDraw(CDC* /*pDC*/);
+//	virtual void OnInitialUpdate();
+	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
+	CTchart1 m_chart2;
+	CTchart1 m_chart3;
+	CTchart1 m_chart4;
+	CTchart1 m_chart5;
+	CTchart1 m_chart6;
+//	afx_msg void OnBnClickedButton1();
+	void m_plot();
+//	afx_msg void OnSize(UINT nType, int cx, int cy);
+//	virtual void OnDraw(CDC* /*pDC*/);
+	afx_msg void OnSize(UINT nType, int cx, int cy);
+	virtual void OnInitialUpdate();
+private:
+	bool m_bcreat;
+	std::vector<double> t;
+	std::vector<STATUSDATA3DOF> shipStatus;
+public:
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
+private:
+	int m_plotst;
 };
 
 

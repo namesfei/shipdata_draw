@@ -117,6 +117,7 @@ BOOL Ctest2App::InitInstance()
 
 	// 调度在命令行中指定的命令。  如果
 	// 用 /RegServer、/Register、/Unregserver 或 /Unregister 启动应用程序，则返回 FALSE。
+	m_nCmdShow = SW_SHOWMAXIMIZED;
 	if (!ProcessShellCommand(cmdInfo))
 		return FALSE;
 

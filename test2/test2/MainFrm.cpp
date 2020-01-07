@@ -6,7 +6,7 @@
 #include "test2.h"
 
 #include "MainFrm.h"
-
+#include "UpView.h"
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -45,26 +45,34 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	if (CFrameWnd::OnCreate(lpCreateStruct) == -1)
 		return -1;
 
-	if (!m_wndToolBar.CreateEx(this, TBSTYLE_FLAT, WS_CHILD | WS_VISIBLE | CBRS_TOP | CBRS_GRIPPER | CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_SIZE_DYNAMIC) ||
-		!m_wndToolBar.LoadToolBar(IDR_MAINFRAME))
-	{
-		TRACE0("未能创建工具栏\n");
-		return -1;      // 未能创建
-	}
+	//if (!m_wndToolBar.CreateEx(this, TBSTYLE_FLAT, WS_CHILD | WS_VISIBLE | CBRS_TOP | CBRS_GRIPPER | CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_SIZE_DYNAMIC) ||
+	//	!m_wndToolBar.LoadToolBar(IDR_MAINFRAME))
+	//{
+	//	TRACE0("未能创建工具栏\n");
+	//	return -1;      // 未能创建
+	//}
 
-	if (!m_wndStatusBar.Create(this))
-	{
-		TRACE0("未能创建状态栏\n");
-		return -1;      // 未能创建
-	}
-	m_wndStatusBar.SetIndicators(indicators, sizeof(indicators)/sizeof(UINT));
+	//if (!m_wndStatusBar.Create(this))
+	//{
+	//	TRACE0("未能创建状态栏\n");
+	//	return -1;      // 未能创建
+	//}
+	//m_wndStatusBar.SetIndicators(indicators, sizeof(indicators)/sizeof(UINT));
 
-	// TODO: 如果不需要可停靠工具栏，则删除这三行
-	m_wndToolBar.EnableDocking(CBRS_ALIGN_ANY);
-	EnableDocking(CBRS_ALIGN_ANY);
-	DockControlBar(&m_wndToolBar);
+	//// TODO: 如果不需要可停靠工具栏，则删除这三行
+	//m_wndToolBar.EnableDocking(CBRS_ALIGN_ANY);
+	//EnableDocking(CBRS_ALIGN_ANY);
+	//DockControlBar(&m_wndToolBar);
 
-
+	//去掉标题栏及其他样式
+	SetWindowLong(this->m_hWnd, GWL_STYLE, 0);
+	//去掉边框及其他样式
+	SetWindowLong(this->m_hWnd, GWL_EXSTYLE, 0);
+	//取消菜单栏
+	this->SetMenu(NULL);
+	//去掉边框风格及其他样式
+	//long Style;
+	SetWindowLong(this->m_hWnd, GWL_EXSTYLE, 0);
 	return 0;
 }
 
@@ -141,4 +149,5 @@ void CMainFrame::OnSize(UINT nType, int cx, int cy)
 		m_splitter.SetRowInfo(1, rc.Height() * 2 / 5, 10);
 		m_splitter.RecalcLayout();
 	}
+
 }
