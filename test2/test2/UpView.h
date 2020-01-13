@@ -2,7 +2,8 @@
 #include "tchart1.h"
 #include <vector>
 #include "ShipStatusOffline.h"
-
+#include "CAxis.h"
+#include "CAxes.h"
 // CUpView ¥∞ÃÂ ”Õº
 
 class CUpView : public CFormView
@@ -29,7 +30,7 @@ protected:
 
 	DECLARE_MESSAGE_MAP()
 private:
-	CTchart1 m_chart;
+	CTchart1 m_chart1;
 public:
 //	afx_msg void OnBnClickedButton1();
 //	virtual void OnDraw(CDC* /*pDC*/);
@@ -41,7 +42,7 @@ public:
 	CTchart1 m_chart5;
 	CTchart1 m_chart6;
 //	afx_msg void OnBnClickedButton1();
-	void m_plot();
+//	void m_plot();
 //	afx_msg void OnSize(UINT nType, int cx, int cy);
 //	virtual void OnDraw(CDC* /*pDC*/);
 	afx_msg void OnSize(UINT nType, int cx, int cy);

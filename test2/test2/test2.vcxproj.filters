@@ -57,6 +57,15 @@
     <ClInclude Include="ShipStatusOffline.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="CAxisLabels.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CAxis.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CAxes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test2.cpp">

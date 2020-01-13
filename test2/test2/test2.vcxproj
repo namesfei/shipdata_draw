@@ -185,6 +185,9 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CAxes.h" />
+    <ClInclude Include="CAxis.h" />
+    <ClInclude Include="CAxisLabels.h" />
     <ClInclude Include="CSeries.h" />
     <ClInclude Include="CTChart.h" />
     <ClInclude Include="DownView.h" />
