@@ -1,0 +1,9 @@
+ztFn02Beta180Grade4Heave；ztFn02Beta180Grade4Pitch；ztFn02Beta180Grade4Roll；ztFn02Beta180Grade4t0为例：
+Fn02表示傅汝德数为0.2；
+Beta180表示浪向角为180度迎浪；
+Grade4表示海况为4级海况；
+Heave表示垂荡运动模态；(单位：m)
+Pitch为纵摇运动模态；(单位：度)
+Roll为横摇运动模态；(单位：度)
+t0表示时间序列；（单位：s，时间间隔为0.1s)
+每个TXT文件保存的数据为1*12001个

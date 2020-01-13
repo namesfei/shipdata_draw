@@ -60,7 +60,8 @@ bool CShipStatusOffline::getShipStatusBySeaLevelAndWind(int nSeaLevel, int nWind
 
 CShipStatusOffline::CShipStatusOffline(void)
 {
-	_filePath = std::string("E:\\shipStatus\\ShipStatusOffLine\\");
+	//_filePath = std::string("E:\\shipStatus\\ShipStatusOffLine\\");
+	_filePath = std::string("D:\\teenew\\git\\test2\\shipStatus\\ShipStatusOffLine\\");
 	readStatusFiles();
 }
 
